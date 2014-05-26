@@ -29,14 +29,14 @@ uwsgi:
     - require:
       - pip: uwsgi
       - pkg: nginx
-    
+
 /etc/init/uwsgi.conf:
   file.managed:
     - source: salt://uwsgi/uwsgi.conf
     - template: jinja
     - require:
       - pip: uwsgi
-        
+
 uwsgi-service:
   service.running:
     - enable: True
@@ -54,7 +54,7 @@ uwsgi-service:
     - require:
       - pip: uwsgi
       - pkg: nginx
-        
+
 /var/log/uwsgi/emperor.log:
   file.managed:
     - user: www-data

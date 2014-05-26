@@ -18,7 +18,7 @@ nginx:
     - template: jinja
     - require:
       - pkg: nginx
-        
+
 default-nginx:
   file.absent:
     - name: /etc/nginx/sites-enabled/default
@@ -39,7 +39,7 @@ www-data:
     - require:
       - user: www-data
       - pkg: nginx
-        
+
 /etc/nginx/sites-available:
   file.directory:
     - user: root

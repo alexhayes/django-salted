@@ -9,4 +9,3 @@ base:
     - example-project.venv
     - example-project.uwsgi
     - example-project.postgresql
-
