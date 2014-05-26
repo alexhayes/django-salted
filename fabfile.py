@@ -51,6 +51,11 @@ def collectstatic():
     manage_py("collectstatic --noinput")
 
 @task
+def createsuperuser():
+    """ Run createsuperuser command. """
+    manage_py("createsuperuser")
+
+@task
 def wheel():
     """ Create new wheel requirements file """
     # Get all the requirements
