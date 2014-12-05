@@ -3,9 +3,8 @@ require 'etc'
 
 Vagrant.configure("2") do |config|
   config.vm.define :web do |web|
-    # Ubuntu 12.04
+    # Ubuntu 14.04
     web.vm.box = "ubuntu/trusty64"
-    #web.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
     # Network
     web.vm.hostname = "vagrant.django-salted.org"
