@@ -8,7 +8,10 @@ Vagrant.configure("2") do |config|
 
     # Network
     web.vm.hostname = "vagrant.django-salted.org"
+    # Django
     web.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+    # RabbitMQ Management
+    web.vm.network :forwarded_port, guest: 15672, host: 25672, auto_correct: true
 
     # Share for masterless server
     web.vm.synced_folder "salt/roots/", "/srv/"
