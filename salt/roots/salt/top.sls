@@ -2,6 +2,7 @@ base:
   '*':
     - requirements.essential
     - ssh
+    - system
   'vagrant.django-salted.org':
     - example-project.requirements
     - example-project.nginx
