@@ -201,3 +201,8 @@ LOGGING = {
 #         },
 #     }
 # }
+
+# Celery settings - http://celery.readthedocs.org/en/latest/configuration.html
+BROKER_URL = 'amqp://demo_project:s3cr3t@localhost:5672/demo_project'
+CELERY_RESULT_BACKEND = 'amqp'
+CELERY_TASK_RESULT_EXPIRES = 18000  # 5 hours.
