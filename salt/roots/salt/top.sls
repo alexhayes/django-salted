@@ -11,3 +11,4 @@ base:
     - example-project.venv
     - example-project.uwsgi
     - example-project.postgresql
+    - example-project.celery
