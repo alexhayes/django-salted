@@ -1,5 +1,6 @@
 include:
   - supervisor
+  - redis.server
 
 /var/run/demo_project:
   file.directory:

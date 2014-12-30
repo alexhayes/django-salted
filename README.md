@@ -47,6 +47,14 @@ the root directory.
 
 All of the above are open-source and free to use.
 
+## Submodules
+
+Some of the salt states use salt formulas that are pulled in via git submodules.
+The following will ensure these exist.
+
+    git submodule init
+    git submodule update
+
 ## Getting started (quick)
 
 If you want to quickly try out what this is all about. Your installation will

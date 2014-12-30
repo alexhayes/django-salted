@@ -5,4 +5,6 @@ base:
     - vagrant-uwsgi
     - vagrant-postgresql
     - vagrant-rabbitmq-server
+    - vagrant-redis
     - vagrant-celery
+    

@@ -203,7 +203,17 @@ LOGGING = {
 #     }
 # }
 
+# Redis settings
+REDIS_SOCKET = '/var/run/redis/redis.sock'
+
 # Celery settings - http://celery.readthedocs.org/en/latest/configuration.html
 BROKER_URL = 'amqp://demo_project:s3cr3t@localhost:5672/demo_project'
-CELERY_RESULT_BACKEND = 'amqp'
-CELERY_TASK_RESULT_EXPIRES = 18000  # 5 hours.
+CELERY_RESULT_BACKEND = 'redis+socket://%s' % REDIS_SOCKET
+
+# Django Cache settings - 
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': REDIS_SOCKET,
+    },
+}
