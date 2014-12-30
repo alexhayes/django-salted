@@ -78,6 +78,13 @@ simple done with changing a few settings.
 
 ## Modify for your own project
 
+Linux
+
+    apt-get install rpl
+    rpl -R "demo_project" "your_project_name" *
+    mv demo_project your_project_name
+    mv your_project_name/demo_project your_project_name/you_project_name
+
 TODO: Write how to modify this repository for your own project.
 
 ## FAQ
