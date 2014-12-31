@@ -1,3 +1,6 @@
 [submodule "salt/roots/formulas/redis-formula"]
 	path = salt/roots/formulas/redis-formula
 	url = https://github.com/alexhayes/redis-formula.git
+[submodule "demo_project"]
+	path = demo_project
+	url = https://github.com/alexhayes/django-1.7-template
