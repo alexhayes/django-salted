@@ -80,8 +80,8 @@ The vagrant machine uses a virtual venvironment located at `/home/vagrant/env`
 After getting familiar with it, using Django Salted on your own project is
 simple done with changing a few settings.
 
-- You will run and develop on the Django (1.5.1) `demo_project` inside the VM.
-- Ubuntu 12.04 will be used as OS.
+- You will run and develop on the Django (1.7.x) `demo_project` inside the VM.
+- Ubuntu 14.04 will be used as OS.
 - Domain is: vagrant.django-salted.org
 
 ## Modify for your own project
