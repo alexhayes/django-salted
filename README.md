@@ -15,6 +15,10 @@ command. Some of the great things which are included:
 - *[PostgreSQL]* is installed and setup for you. No more explaining to your
   designer how to get the project running.
 - Some helpfull *[Fabric]* functions, e.g., running `syncdb` on Vagrant.
+- *[Celery]* using *[RabbitMQ]* as a broker and *[Redis]* as a result backend.
+- *[Redis]* for Django caching.
+- *[Supervisor]* to run the *[Celery]* workers defined in pillar data.
+
 
 **Table of Contents**
 
@@ -159,3 +163,7 @@ me.
 [TODO.org]: https://github.com/wunki/django-salted/blob/master/TODO.org
 [Issues]: https://github.com/wunki/django-salted/issues
 [@wunki]: https://twitter.com/wunki
+[Celery]: http://www.celeryproject.org/
+[RabbitMQ]: http://www.rabbitmq.com/
+[Redis]: http://redis.io/
+[Supervisor]: http://supervisord.org/
