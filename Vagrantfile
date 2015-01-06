@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
     # Share for masterless server
     web.vm.synced_folder "salt/roots/", "/srv/"
-
+    
     if File.directory? File.expand_path "./data/apt-cache/partial/"
       config.vm.synced_folder "data/apt-cache", "/var/cache/apt/archives", :owner => "root", :group => "root"
     end

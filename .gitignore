@@ -1,6 +1,5 @@
 /.vagrant/
 /.ropeproject/
 *.pyc
-demo_project/demo_project/static/
 .project
 .venv

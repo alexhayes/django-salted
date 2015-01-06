@@ -6,7 +6,7 @@ include:
   virtualenv.managed:
     - system_site_packages: False
     - runas: {{ pillar['django']['user'] }}
-    - requirements: {{ pillar['django']['path'] }}/requirements.txt  
+    - requirements: {{ pillar['django']['path'] }}/{{ pillar['django']['requirements'] }}
     - no_chown: True
     - require:
       - pkg: python-virtualenv

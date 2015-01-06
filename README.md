@@ -77,14 +77,15 @@ You will also need to collect the static files to use the demo project. This can
 
     fab vagrant collectstatic
 
-The demo_project is a very simple project with the Djagno Admin [http://127.0.0.1:8080/admin](http://127.0.0.1:8080/admin)
+The demo-project is a git submodule that pulls in [django-1.7-template](https://github.com/alexhayes/django-1.7-template).  The webserver, including Django Admin is accessible from the host machine at [http://127.0.0.1:8080/admin](http://127.0.0.1:8080/admin).
 
-The vagrant machine uses a virtual venvironment located at `/home/vagrant/env`
+Essentially the idea of the demo-project as a submodule is so that you can pull changes from both django-salted as an upstream provider and also your own forked django-1.7-template.
 
-After getting familiar with it, using Django Salted on your own project is
-simple done with changing a few settings.
+The vagrant machine uses a virtual environment located at `/home/vagrant/.virtualenvs/demo-project` however if you're using an IDE then you will most likely want to install this virtual environment locally also so your IDE can utilise the Python binary. This can be done by installing the requirements file in `demo-project/requirements/development.txt` (if anyone has a way to reference the Python binary on the guest by all means fork and create a pull request - note that a shared folder doesn't work). 
 
-- You will run and develop on the Django (1.7.x) `demo_project` inside the VM.
+After getting familiar with it, using Django Salted on your own project is simple done with changing a few settings.
+
+- You will run and develop on the Django (1.7.x) `demo-project` inside the VM.
 - Ubuntu 14.04 will be used as OS.
 - Domain is: vagrant.django-salted.org
 
@@ -93,9 +94,9 @@ simple done with changing a few settings.
 Linux
 
     apt-get install rpl
-    rpl -R "demo_project" "your_project_name" *
-    mv demo_project your_project_name
-    mv your_project_name/demo_project your_project_name/you_project_name
+    rpl -R "demo-project" "your_project_name" *
+    mv demo-project your_project_name
+    mv your_project_name/demo-project your_project_name/you_project_name
 
 TODO: Write how to modify this repository for your own project.
 

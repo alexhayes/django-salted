@@ -4,12 +4,14 @@ base:
     - ssh
     - system
   'vagrant.django-salted.org':
-    - example-project.requirements
-    - example-project.nginx
-    - example-project.rabbitmq-server
-    - example-project.redis
-    - example-project.share
-    - example-project.venv
-    - example-project.uwsgi
-    - example-project.postgresql
-    - example-project.celery
+    - demo-project.requirements
+    - demo-project.nginx
+    - demo-project.rabbitmq-server
+    - demo-project.redis
+    - demo-project.share
+    - demo-project.venv
+    - demo-project.uwsgi
+    - demo-project.postgresql
+    - demo-project.celery
+    - demo-project.bower
+    

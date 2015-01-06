@@ -3,8 +3,8 @@ include:
 
 example-nginx-conf:
   file.managed:
-    - name: /etc/nginx/sites-available/example.conf
-    - source: salt://example-project/nginx.conf
+    - name: /etc/nginx/sites-available/{{ pillar['nginx']['server_name'] }}.conf
+    - source: salt://demo-project/nginx.conf
     - template: jinja
     - user: www-data
     - group: www-data
@@ -15,8 +15,8 @@ example-nginx-conf:
 # Symlink and thus enable the virtual host
 example-enable-nginx:
   file.symlink:
-    - name: /etc/nginx/sites-enabled/example.conf
-    - target: /etc/nginx/sites-available/example.conf
+    - name: /etc/nginx/sites-enabled/{{ pillar['nginx']['server_name'] }}.conf
+    - target: /etc/nginx/sites-available/{{ pillar['nginx']['server_name'] }}.conf
     - force: false
     - require:
       - file: example-nginx-conf

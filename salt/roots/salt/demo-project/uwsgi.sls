@@ -4,7 +4,7 @@ include:
 example-uwsgi:
   file.managed:
     - name: /etc/uwsgi/apps-available/example.ini
-    - source: salt://example-project/uwsgi.ini
+    - source: salt://demo-project/uwsgi.ini
     - template: jinja
     - user: www-data
     - group: www-data

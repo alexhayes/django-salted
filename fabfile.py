@@ -9,9 +9,9 @@ LOCAL_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # Server paths
 PROJECT_NAME = "example"
-PROJECT_PATH = "/vagrant/demo_project"
+PROJECT_PATH = "/vagrant/demo-project"
 
-MANAGE_BIN = "/vagrant/demo_project/manage.py"
+MANAGE_BIN = "/vagrant/demo-project/project/manage.py"
 VENV_PATH = "/home/vagrant/env"
 WHEEL_PATH = "/home/vagrant/wheel"
 WHEEL_NAME = "wheel-requirements.tar.gz"

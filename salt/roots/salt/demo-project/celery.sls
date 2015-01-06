@@ -2,7 +2,7 @@ include:
   - supervisor
   - redis.server
 
-/var/run/demo_project:
+/var/run/demo-project:
   file.directory:
     - user: vagrant
     - group: vagrant
@@ -14,9 +14,9 @@ include:
     - group: vagrant
     - makedirs: True
 
-/etc/supervisor/conf.d-available/demo_project-celery.conf:
+/etc/supervisor/conf.d-available/demo-project-celery.conf:
   file.managed:
-    - source: salt://example-project/celery.conf
+    - source: salt://demo-project/celery.conf
     - template: jinja
     - user: root
     - group: root
@@ -25,9 +25,9 @@ include:
       - pkg: supervisor
 
 # Symlink and thus enable the celery.conf
-/etc/supervisor/conf.d-enabled/demo_project-celery.conf:
+/etc/supervisor/conf.d-enabled/demo-project-celery.conf:
   file.symlink:
-    - target: /etc/supervisor/conf.d-available/demo_project-celery.conf
+    - target: /etc/supervisor/conf.d-available/demo-project-celery.conf
     - force: false
     - require:
-      - file: /etc/supervisor/conf.d-available/demo_project-celery.conf
+      - file: /etc/supervisor/conf.d-available/demo-project-celery.conf
